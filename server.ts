@@ -21,13 +21,13 @@ async function startServer() {
 
   // Mock Data Store
   let activeCalls = [
-    { id: "call_1", status: "active", duration: "02:14", riskScore: 85, caller: "+1 555-0101", agent: "AI-PPP-01" },
-    { id: "call_2", status: "monitoring", duration: "05:42", riskScore: 12, caller: "+1 555-0202", agent: "Manual" },
+    { id: "lure_1", status: "active", duration: "02:14", riskScore: 92, caller: "Lurer_X", agent: "Wildy_Bot" },
+    { id: "phish_2", status: "monitoring", duration: "05:42", riskScore: 15, caller: "GE_Spammer", agent: "Manual" },
   ];
 
   let alerts = [
-    { id: "alert_1", type: "CRITICAL", message: "High risk PPP application detected in call #1", timestamp: new Date().toISOString() },
-    { id: "alert_2", type: "WARNING", message: "Unusual VOIP origin detected for caller +1 555-0101", timestamp: new Date().toISOString() },
+    { id: "alert_1", type: "CRITICAL", message: "Wilderness lure detected: 'Anti-lure' script in progress", timestamp: new Date().toISOString() },
+    { id: "alert_2", type: "WARNING", message: "Suspicious 'Double XP' link detected in RuneChat", timestamp: new Date().toISOString() },
   ];
 
   app.use(express.json());
@@ -35,10 +35,10 @@ async function startServer() {
   // API Routes
   app.get("/api/stats", (req, res) => {
     res.json({
-      totalCalls: 124,
-      fraudDetected: 18,
+      totalCalls: 4520, // Total interactions
+      fraudDetected: 842, // Lures/Scams prevented
       activeMonitoring: activeCalls.length,
-      averageRiskScore: 42,
+      averageRiskScore: 68, // GP risk
     });
   });
 

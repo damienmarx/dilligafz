@@ -1,6 +1,6 @@
 {
-  "name": "Alpha Asset Recovery & Retention",
-  "description": "A comprehensive PPP fraud simulation and detection platform featuring AI-powered agents, real-time VOIP integration, and multi-layer fraud detection analytics.",
+  "name": "RuneGuard OS",
+  "description": "Sophisticated OSRS fraud simulation platform with AI-powered scammer agents, lure narrative generators, and real-time orchestrator. Specialized in RuneChat, RuneHall, and RuneWager scam vectors with deep psychological profiling and risk analysis.",
   "requestFramePermissions": [
     "microphone"
   ]

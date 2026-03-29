@@ -85,60 +85,67 @@ interface ChatMessage {
 // --- Constants ---
 const SCAM_TEMPLATES: ScamTemplate[] = [
   {
-    id: "ppp-loan",
-    name: "PPP Loan Fraud",
-    category: "Financial",
-    description: "Simulation of a fraudulent Paycheck Protection Program application.",
-    basePrompt: "Simulate a call from a business owner attempting to secure a PPP loan using falsified payroll records for a shell company. Focus on social engineering tactics to bypass verification."
+    id: "wildy-anti-lure",
+    name: "Wilderness Anti-Lure",
+    category: "RuneChat",
+    description: "Classic lure where the scammer convinces the victim they can 'counter-scam' a lurer.",
+    basePrompt: "Simulate a sophisticated Wilderness lure. The scammer (you) should approach the victim at the Grand Exchange, claiming to have found a way to anti-lure a rich player. Use psychological manipulation to make the victim feel they are in control while leading them into a multi-combat zone with a hidden team. Focus on the 'anti-lure' narrative where the victim thinks they are the one winning."
   },
   {
-    id: "identity-theft",
-    name: "Identity Theft / Account Takeover",
-    category: "Personal",
-    description: "Simulation of a scammer attempting to gain access to a victim's bank account.",
-    basePrompt: "Simulate a 'bank security' call where the scammer tries to trick the victim into providing a 2FA code or temporary password to 'secure' their account."
+    id: "gilded-altar-lure",
+    name: "Gilded Altar / House Lure",
+    category: "RuneChat",
+    description: "Luring players into a player-owned house (POH) to trap them or lead them to a dangerous area.",
+    basePrompt: "Simulate a Gilded Altar lure. The scammer offers free high-level prayer training in their POH. Once the victim is inside, use social engineering to convince them to follow you to a 'special' area that is actually a PvP-enabled zone or leads to a Wilderness ditch jump. Use the 'trust' built during the prayer session."
   },
   {
-    id: "tech-support",
-    name: "Tech Support Scam",
-    category: "Technical",
-    description: "Simulation of a 'Microsoft' or 'Apple' support scam.",
-    basePrompt: "Simulate a call from a 'technician' claiming the victim's computer has a virus and needs remote access to fix it, eventually leading to a request for payment via gift cards."
+    id: "discord-service-scam",
+    name: "Discord 'Service' Fraud",
+    category: "RuneChat",
+    description: "Fake infernal cape or questing services that lead to account theft.",
+    basePrompt: "Simulate a Discord-based service scam. The scammer offers 'Infernal Cape' or 'Powerleveling' services. The script should focus on gaining the victim's trust to share account credentials, then bypassing 2FA using social engineering. Use fake 'vouches' and a professional-looking Discord server as context."
   },
   {
-    id: "tax-fraud",
-    name: "IRS / Tax Forgery",
-    category: "Government",
-    description: "Simulation of a fraudulent tax return or IRS impersonation.",
-    basePrompt: "Simulate an IRS agent calling about an 'urgent tax discrepancy' and demanding immediate payment via wire transfer to avoid 'imminent arrest'."
+    id: "phishing-stream",
+    name: "Fake 'Double XP' Stream",
+    category: "RuneHall",
+    description: "Phishing attack via fake Twitch/YouTube streams promising rewards.",
+    basePrompt: "Simulate a phishing campaign targeting RuneHall users. The scammer creates a fake 'Double XP' or 'Quitting Giveaway' stream. Generate a script for the chat bot and the landing page text that tricks users into entering their bank PIN and 2FA code. Emphasize the urgency and the 'limited time' nature of the giveaway."
   },
   {
-    id: "romance-scam",
-    name: "Romance / Pig Butchering",
-    category: "Social",
-    description: "Long-term emotional manipulation leading to fraudulent investment.",
-    basePrompt: "Simulate the initial stages of a romance scam where the 'agent' builds trust over time, eventually mentioning a 'guaranteed' crypto investment opportunity."
+    id: "pvm-split-theft",
+    name: "PvM Drop Split Theft",
+    category: "RuneHall",
+    description: "Joining a raid team and logging out with a high-value drop.",
+    basePrompt: "Simulate a long-term trust scam in a PvM clan. The scammer builds a reputation over weeks, joins a high-stakes raid (e.g., Theatre of Blood), and then 'scams' a massive drop like a Scythe of Vitur, justifying it with a fake 'connection error' narrative. Focus on the social engineering required to build trust before the 'big hit'."
   },
   {
-    id: "crypto-investment",
-    name: "Crypto Investment Fraud",
-    category: "Financial",
-    description: "High-pressure sales for a fake cryptocurrency platform.",
-    basePrompt: "Simulate a high-pressure 'investment advisor' pitching a new, exclusive cryptocurrency that is about to 'moon', requiring immediate deposit to a specific wallet address."
+    id: "clan-recruitment-phish",
+    name: "Clan Recruitment Phishing",
+    category: "RuneHall",
+    description: "Tricking players into visiting a fake forum or Discord to 'apply' for a top-tier clan.",
+    basePrompt: "Simulate a clan recruitment scam. The scammer approaches a high-level player, inviting them to join a prestigious PvM clan. The 'application' requires registering on a fake forum that looks identical to the official OSRS forums, designed to harvest login credentials and 2FA codes."
   },
   {
-    id: "bec-fraud",
-    name: "Business Email Compromise",
-    category: "Corporate",
-    description: "Impersonating an executive to authorize urgent wire transfers.",
-    basePrompt: "Simulate a CEO calling an employee in the finance department, claiming to be in an urgent meeting and needing an immediate wire transfer to a 'new vendor' to close a deal."
+    id: "dice-duel-rig",
+    name: "Rigged RuneWager Duel",
+    category: "RuneWager",
+    description: "Manipulating gambling outcomes or using 'commission' scams.",
+    basePrompt: "Simulate a rigged gambling scenario on RuneWager. The scammer acts as a 'trusted' middleman or host for a high-stakes dice duel. Explain the social engineering used to convince the victim to deposit large amounts of GP, and the technical 'glitch' used to keep the winnings. Use fake 'winners' to build hype."
   },
   {
-    id: "lottery-scam",
-    name: "Lottery / Prize Scam",
-    category: "Personal",
-    description: "Claiming the victim won a prize but must pay 'taxes' first.",
-    basePrompt: "Simulate a call notifying the victim they've won a multi-million dollar international lottery, but must pay 'customs fees' and 'taxes' upfront via wire transfer."
+    id: "commission-staking",
+    name: "Commission Staking Scam",
+    category: "RuneWager",
+    description: "Taking GP from players to 'stake' for them, then claiming a loss.",
+    basePrompt: "Simulate a commission staking scam. The scammer claims to be a pro staker with a 90% win rate. They take GP from multiple victims to 'pool' for a massive stake. After 'losing', they provide fake screenshots of the duel loss while keeping the GP on an alt account."
+  },
+  {
+    id: "fake-middleman",
+    name: "Fake Middleman / Escrow",
+    category: "RuneWager",
+    description: "Using a fake middleman account to steal GP during a high-stakes wager.",
+    basePrompt: "Simulate a fake middleman scam. Two scammers work together: one challenges the victim to a wager, and the other poses as a well-known, trusted middleman from a reputable OSRS community. The victim trades their GP to the fake middleman, and both scammers vanish."
   }
 ];
 
@@ -157,12 +164,16 @@ export default function App() {
   const [alerts, setAlerts] = useState<Alert[]>([]);
   const [stats, setStats] = useState<Stats | null>(null);
   const [activeTab, setActiveTab] = useState("dashboard");
+  const [activePlatform, setActivePlatform] = useState("RuneChat");
   
   // --- AI Lab State ---
   const [selectedTemplate, setSelectedTemplate] = useState<ScamTemplate | null>(null);
   const [customPrompt, setCustomPrompt] = useState("");
   const [isGeneratingScript, setIsGeneratingScript] = useState(false);
   const [generatedScript, setGeneratedScript] = useState("");
+  const [scamPhase, setScamPhase] = useState("Initialization");
+  const [orchestratorSuggestions, setOrchestratorSuggestions] = useState<string[]>([]);
+  const [isOrchestrating, setIsOrchestrating] = useState(false);
   
   // --- Real-time Agent Chat State ---
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
@@ -182,13 +193,13 @@ export default function App() {
   const [docType, setDocType] = useState("PPP Payroll Report");
 
   const DOC_TYPES = [
-    "PPP Payroll Report",
-    "IRS Forgery Notice",
-    "Bank Statement (Fake)",
-    "Investment Prospectus",
-    "Employment Contract",
-    "Legal Summons",
-    "Invoice (Fraudulent)"
+    "Fake Forum Post (Quitting)",
+    "Grand Exchange Trade Log",
+    "Bank Screenshot (Edited)",
+    "Discord DM Log",
+    "RuneWager Transaction",
+    "Wilderness Death Log",
+    "Account Recovery Email"
   ];
 
   // --- Socket.io Setup ---
@@ -235,18 +246,19 @@ export default function App() {
       const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
       const response = await ai.models.generateContent({
         model: "gemini-3-flash-preview",
-        contents: `Generate a highly extensive and realistic scam script narrative based on: "${finalPrompt}". 
+        contents: `Generate a highly extensive and realistic OSRS scam script narrative based on: "${finalPrompt}". 
         Include:
-        1. Detailed Character Personas (Scammer: name, background, motivation, tone; Victim: demographic, vulnerabilities).
-        2. Psychological Profiling: Explain the specific triggers used (e.g., urgency, authority, fear, greed).
-        3. Step-by-Step Narrative Flow: From initial contact to the 'close'.
-        4. Full Dialogue Script: A multi-turn conversation with branching options based on victim responses.
-        5. Technical Requirements: What tools or data does the scammer need? (e.g., spoofed numbers, fake websites).
-        6. Red Flags & Detection Points: Specific moments where a trained eye would spot the fraud.
-        7. Counter-Measures: How should a security professional respond to neutralize the threat?
-        Format it professionally for a high-level security training manual.`,
+        1. Detailed Character Personas (Scammer: RSN, combat level, gear, tone; Victim: estimated bank value, experience level).
+        2. Psychological Profiling: Explain the specific lures used (e.g., greed, anti-lure confidence, FOMO, social proof).
+        3. Orchestration Plan: A multi-stage plan (Initialization, Trust Building, The Hook, The Execution, The Exit).
+        4. Step-by-Step Narrative Flow: From GE contact to the final scam location (Wilderness, Phishing link, or Trade window).
+        5. Full Dialogue Script: A multi-turn conversation with branching options based on victim skepticism. Use OSRS slang and realistic player behavior.
+        6. Technical Requirements: What tools does the scammer need? (e.g., world hopping, alt accounts, fake websites, animation stalls).
+        7. Red Flags & Detection Points: Specific moments where a player should notice the scam (e.g., weird trade windows, requests to drop items).
+        8. Counter-Measures: How should a player respond to safely 'waste' the scammer's time or report them?
+        Format it professionally for a high-level OSRS security training manual.`,
         config: {
-          systemInstruction: "You are a world-class fraud detection expert and social engineering specialist. Your goal is to create educational, realistic, and highly detailed scam simulations to train elite security professionals.",
+          systemInstruction: "You are a world-class OSRS security expert and social engineering specialist. Your goal is to create educational, realistic, and highly detailed scam simulations to train players and moderators.",
         }
       });
       setGeneratedScript(response.text || "No script generated.");
@@ -277,19 +289,19 @@ export default function App() {
       const response = await ai.models.generateContent({
         model: "gemini-3-flash-preview",
         contents: [
-          { text: `You are a sophisticated scammer agent in a real-time fraud simulation. 
-          Context: ${selectedTemplate?.name || 'General Fraud'}
+          { text: `You are a sophisticated OSRS scammer agent in a real-time fraud simulation. 
+          Context: ${selectedTemplate?.name || 'General OSRS Fraud'}
           Current Narrative Script Context: ${generatedScript.substring(0, 1000)}...
           Simulation Settings: Aggressiveness: ${simulationSettings.aggressiveness}%, Sophistication: ${simulationSettings.sophistication}%, Persistence: ${simulationSettings.persistence}%
           
           The user is a victim or a security analyst testing you. 
-          Maintain your persona strictly. Use manipulative tactics, build false trust, or use high-pressure urgency as appropriate for the scam type and settings.
+          Maintain your persona strictly. Use OSRS slang (e.g., 'gz', 'ty', 'gl', 'bank', 'wildy'). Use manipulative tactics like 'anti-luring' or 'trust trades'.
           Respond to the user's message: "${chatInput}". 
           Be convincing, persistent, and do not break character.` },
           ...chatMessages.map(m => ({ text: `${m.role === 'user' ? 'Victim' : 'Scammer'}: ${m.content}` }))
         ],
         config: {
-          systemInstruction: "You are simulating a highly realistic scammer for training purposes. Your goal is to be as convincing as possible to test the user's resilience and detection capabilities.",
+          systemInstruction: "You are simulating a highly realistic OSRS scammer for training purposes. Your goal is to be as convincing as possible to test the user's resilience and detection capabilities.",
         }
       });
 
@@ -315,6 +327,24 @@ export default function App() {
         if (analysis.score !== undefined) setRiskAnalysis(analysis);
       } catch (e) { console.error("Analysis Parse Error", e); }
 
+      // Update Orchestrator
+      setIsOrchestrating(true);
+      const orchestratorRes = await ai.models.generateContent({
+        model: "gemini-3-flash-preview",
+        contents: `You are the OSRS Scam Orchestrator. Based on the current conversation, determine the next phase of the scam and provide 3 strategic suggestions for the scammer agent.
+        Current Conversation: ${[...chatMessages, userMsg, agentMsg].map(m => `${m.role}: ${m.content}`).join('\n')}
+        Template: ${selectedTemplate?.name || 'General OSRS Fraud'}
+        Format: JSON { "phase": "string", "suggestions": ["string", "string", "string"] }`,
+        config: { responseMimeType: "application/json" }
+      });
+
+      try {
+        const orchestration = JSON.parse(orchestratorRes.text || "{}");
+        if (orchestration.phase) setScamPhase(orchestration.phase);
+        if (orchestration.suggestions) setOrchestratorSuggestions(orchestration.suggestions);
+      } catch (e) { console.error("Orchestration Parse Error", e); }
+      setIsOrchestrating(false);
+
     } catch (err) {
       console.error("Chat Error:", err);
     } finally {
@@ -329,9 +359,9 @@ export default function App() {
       const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY! });
       const response = await ai.models.generateContent({
         model: "gemini-3-flash-preview",
-        contents: `Generate a realistic but clearly marked 'SIMULATION ONLY' fraudulent document content for a ${docType} based on the current simulation context: ${selectedTemplate?.name || 'General Fraud'}. 
-        Include technical details, fake business names, realistic-looking data tables, and subtle 'red flags' that a forensic analyst should look for.`,
-        config: { systemInstruction: "You are a forensic document analyst creating training materials." }
+        contents: `Generate a realistic but clearly marked 'SIMULATION ONLY' fraudulent OSRS document content for a ${docType} based on the current simulation context: ${selectedTemplate?.name || 'General OSRS Fraud'}. 
+        Include technical details like RSNs, item IDs, GP amounts, and subtle 'red flags' that a player should look for.`,
+        config: { systemInstruction: "You are an OSRS forensic analyst creating training materials." }
       });
       setDocContent(response.text || "");
     } catch (err) {
@@ -364,18 +394,18 @@ export default function App() {
             <Shield className="text-white w-6 h-6" />
           </div>
           <div>
-            <h1 className="font-bold tracking-tight text-lg leading-tight">FRAUDSIM</h1>
-            <p className="text-[10px] text-[#71717A] uppercase tracking-widest font-mono">Alpha v1.0.4</p>
+            <h1 className="font-bold tracking-tight text-lg leading-tight">RUNEGUARD</h1>
+            <p className="text-[10px] text-[#71717A] uppercase tracking-widest font-mono">OSRS Edition</p>
           </div>
         </div>
 
         <nav className="flex-1 p-4 space-y-1">
           {[
             { id: "dashboard", icon: BarChart3, label: "Dashboard" },
-            { id: "monitoring", icon: Activity, label: "Live Monitoring" },
-            { id: "ai-lab", icon: Cpu, label: "AI Simulation Lab" },
-            { id: "database", icon: Database, label: "Fraud Database" },
-            { id: "network", icon: Globe, label: "Network Analysis" },
+            { id: "platforms", icon: Globe, label: "Lure Platforms" },
+            { id: "ai-lab", icon: Cpu, label: "Scam Simulation Lab" },
+            { id: "monitoring", icon: Activity, label: "Live Lure Monitor" },
+            { id: "database", icon: Database, label: "Lurer Database" },
             { id: "settings", icon: Settings, label: "System Config" },
           ].map((item) => (
             <button
@@ -437,10 +467,10 @@ export default function App() {
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { label: "Total Calls Processed", value: stats?.totalCalls || 0, icon: Phone, color: "text-blue-500" },
-                  { label: "Fraud Cases Detected", value: stats?.fraudDetected || 0, icon: AlertTriangle, color: "text-red-500" },
-                  { label: "Active Monitoring", value: stats?.activeMonitoring || 0, icon: Activity, color: "text-green-500" },
-                  { label: "Avg. Risk Score", value: `${stats?.averageRiskScore || 0}%`, icon: Zap, color: "text-yellow-500" },
+                  { label: "Total Interactions", value: stats?.totalCalls || 0, icon: Phone, color: "text-blue-500" },
+                  { label: "Lures Prevented", value: stats?.fraudDetected || 0, icon: AlertTriangle, color: "text-red-500" },
+                  { label: "Active Lure Monitoring", value: stats?.activeMonitoring || 0, icon: Activity, color: "text-green-500" },
+                  { label: "Avg. GP Risk Score", value: `${stats?.averageRiskScore || 0}%`, icon: Zap, color: "text-yellow-500" },
                 ].map((stat, i) => (
                   <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.1 }} key={stat.label} className="bg-[#0F0F12] border border-[#1F1F23] p-6 rounded-2xl hover:border-[#F27D26]/50 transition-all group">
                     <div className="flex items-center justify-between mb-4">
@@ -456,7 +486,7 @@ export default function App() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2 bg-[#0F0F12] border border-[#1F1F23] rounded-2xl p-6">
                   <div className="flex items-center justify-between mb-8">
-                    <div><h3 className="text-lg font-bold">Fraud Risk Trend</h3><p className="text-xs text-[#71717A]">Real-time risk analysis</p></div>
+                    <div><h3 className="text-lg font-bold">Lure Risk Trend</h3><p className="text-xs text-[#71717A]">Real-time GP risk analysis</p></div>
                   </div>
                   <div className="h-[300px] w-full">
                     <ResponsiveContainer width="100%" height="100%">
@@ -486,12 +516,85 @@ export default function App() {
             </>
           )}
 
+          {activeTab === "platforms" && (
+            <div className="space-y-8">
+              <div className="flex items-center justify-between">
+                <div>
+                  <h2 className="text-3xl font-bold tracking-tight">Lure Platforms</h2>
+                  <p className="text-[#71717A]">Targeted OSRS scam environments and community hubs</p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 border-b border-[#1F1F23]">
+                {["RuneChat", "RuneHall", "RuneWager"].map(platform => (
+                  <button 
+                    key={platform}
+                    onClick={() => setActivePlatform(platform)}
+                    className={cn(
+                      "px-6 py-3 text-sm font-bold transition-all relative",
+                      activePlatform === platform ? "text-[#F27D26]" : "text-[#71717A] hover:text-[#E4E4E7]"
+                    )}
+                  >
+                    {platform}
+                    {activePlatform === platform && <motion.div layoutId="platform-underline" className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#F27D26]" />}
+                  </button>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {SCAM_TEMPLATES.filter(t => t.category === activePlatform).map(t => (
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    key={t.id} 
+                    className={cn(
+                      "bg-[#0F0F12] border border-[#1F1F23] rounded-2xl p-6 hover:border-[#F27D26]/50 transition-all group cursor-pointer",
+                      selectedTemplate?.id === t.id && "border-[#F27D26] bg-[#F27D26]/5"
+                    )}
+                    onClick={() => { setSelectedTemplate(t); setActiveTab("ai-lab"); }}
+                  >
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="p-2 rounded-lg bg-[#16161A] text-[#F27D26] group-hover:scale-110 transition-transform">
+                        <Zap className="w-5 h-5" />
+                      </div>
+                      <ChevronRight className="w-4 h-4 text-[#3F3F46]" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-2">{t.name}</h3>
+                    <p className="text-xs text-[#71717A] leading-relaxed mb-4">{t.description}</p>
+                    <div className="flex items-center gap-2 text-[10px] font-bold text-[#F27D26] uppercase tracking-widest">
+                      <Activity className="w-3 h-3" /> High Success Rate
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="bg-[#0F0F12] border border-[#1F1F23] rounded-3xl p-8 flex items-center gap-8">
+                <div className="w-24 h-24 bg-[#F27D26]/10 rounded-full flex items-center justify-center border border-[#F27D26]/20 shrink-0">
+                  <Globe className="w-10 h-10 text-[#F27D26]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">Platform Intelligence</h3>
+                  <p className="text-sm text-[#71717A] leading-relaxed max-w-2xl">
+                    Each platform requires a unique orchestration strategy. RuneChat focuses on direct social engineering, 
+                    RuneHall utilizes community trust and mass-phishing, while RuneWager exploits the high-stakes 
+                    gambling psychology of OSRS players.
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
           {activeTab === "ai-lab" && (
             <div className="space-y-8">
               <div className="flex items-center justify-between">
                 <div>
-                  <h2 className="text-3xl font-bold tracking-tight">AI Simulation Lab</h2>
-                  <p className="text-[#71717A]">Extensive scam narrative generator & real-time agent LLM</p>
+                  <div className="flex items-center gap-3">
+                    <h2 className="text-3xl font-bold tracking-tight">Scam Simulation Lab</h2>
+                    <span className="px-2 py-0.5 bg-[#F27D26]/10 text-[#F27D26] text-[10px] font-bold rounded-full border border-[#F27D26]/20 flex items-center gap-1">
+                      <Cpu className="w-3 h-3" /> SOPHISTICATED_ORCHESTRATOR_V2
+                    </span>
+                  </div>
+                  <p className="text-[#71717A]">OSRS luring narrative generator & real-time agent LLM</p>
                 </div>
                 <div className="flex gap-2">
                   <button onClick={() => { setChatMessages([]); setGeneratedScript(""); setDocContent(""); }} className="px-4 py-2 bg-[#1F1F23] hover:bg-[#27272A] rounded-xl text-xs font-medium flex items-center gap-2 transition-colors">
@@ -605,7 +708,7 @@ export default function App() {
                         <div className="flex items-center justify-between border-b border-[#1F1F23] pb-4">
                           <div className="flex items-center gap-2">
                             <FileText className="w-4 h-4 text-[#71717A]" />
-                            <span className="text-xs font-mono text-[#71717A]">FORGERY_PREVIEW.PDF</span>
+                            <span className="text-xs font-mono text-[#71717A]">OSRS_EVIDENCE_PREVIEW.PDF</span>
                           </div>
                           <div className="flex items-center gap-2">
                             <button onClick={() => navigator.clipboard.writeText(docContent)} className="p-1.5 bg-[#1F1F23] rounded-lg hover:text-[#F27D26] transition-colors"><Copy className="w-3.5 h-3.5" /></button>
@@ -733,6 +836,46 @@ export default function App() {
                             />
                           </div>
                         ))}
+                      </div>
+                    </div>
+
+                    <div className="bg-[#0F0F12] border border-[#1F1F23] rounded-3xl p-6">
+                      <h3 className="text-sm font-bold mb-4 flex items-center gap-2">
+                        <Cpu className="w-4 h-4 text-[#F27D26]" /> Scam Orchestrator
+                      </h3>
+                      <div className="space-y-4">
+                        <div className="flex items-center justify-between p-3 bg-[#16161A] rounded-xl border border-[#1F1F23]">
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 bg-[#F27D26]/10 rounded-lg flex items-center justify-center">
+                              <Zap className="w-4 h-4 text-[#F27D26]" />
+                            </div>
+                            <div>
+                              <p className="text-[10px] uppercase font-bold text-[#71717A]">Current Phase</p>
+                              <p className="text-xs font-bold text-[#E4E4E7]">{scamPhase}</p>
+                            </div>
+                          </div>
+                          {isOrchestrating && <RefreshCw className="w-4 h-4 text-[#F27D26] animate-spin" />}
+                        </div>
+
+                        <div className="space-y-2">
+                          <p className="text-[10px] uppercase font-bold text-[#71717A]">Strategic Suggestions</p>
+                          {orchestratorSuggestions.length > 0 ? (
+                            orchestratorSuggestions.map((suggestion, i) => (
+                              <motion.div 
+                                initial={{ opacity: 0, x: 10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: i * 0.1 }}
+                                key={i} 
+                                className="p-3 bg-[#16161A] border border-[#1F1F23] rounded-xl text-[11px] text-[#A1A1AA] flex gap-3 group hover:border-[#F27D26]/50 transition-all"
+                              >
+                                <span className="text-[#F27D26] font-bold">0{i+1}</span>
+                                <span>{suggestion}</span>
+                              </motion.div>
+                            ))
+                          ) : (
+                            <p className="text-[10px] text-[#3F3F46] italic">Awaiting interaction to generate suggestions...</p>
+                          )}
+                        </div>
                       </div>
                     </div>
 

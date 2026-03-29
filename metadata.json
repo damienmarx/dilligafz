@@ -1,0 +1,7 @@
+{
+  "name": "Alpha Asset Recovery & Retention",
+  "description": "A comprehensive PPP fraud simulation and detection platform featuring AI-powered agents, real-time VOIP integration, and multi-layer fraud detection analytics.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
